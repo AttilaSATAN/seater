@@ -22,7 +22,10 @@ func (p Plane) SeatByIndex(i int) (string, error) {
 		return "", errors.New("seat index exceeds total seat number ")
 	}
 	c := i % len(p.ColNames)
-	r := math.Floor(float64(i / len(p.ColNames)))
+	if c == 0 {
+		c = len(p.ColNames)
+	}
+	r := math.Floor(float64(i/len(p.ColNames))) + 1
 
 	return strconv.Itoa(int(r)) + p.ColNames[c], nil
 }

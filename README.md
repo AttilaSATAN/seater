@@ -22,6 +22,12 @@ There is only one end-point which gets the seat number as asked in the assignmen
 
 localhost:8080/plane/id/{id:string}/seat/{index:int}
 
+**Examples**
+http://localhost:8080/plane/id/THY800/seat/26
+http://localhost:8080/plane/id/THY800/seat/61 (erroneous)
+http://localhost:8080/plane/id/AVA240/seat/115
+
+
 ### TODO
 
 - Tests
