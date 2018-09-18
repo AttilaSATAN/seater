@@ -3,7 +3,12 @@ Simple show case app
 
 idiotically simple app
 
-Dependecy management provided by `dep` you should [install](github.com/golang/dep/) it.
+
+***BONUS***
+
+I didn't want to just calculate a 60x10 plane seats but I created a `plane` package that could define new planes exc.
+
+Dependecy management provided by `dep` you should [install](https://github.com/golang/dep/) it.
 uses only `github.com/kataras/iris` though
 
 ```
@@ -15,3 +20,12 @@ or clone this repo and in main folder.
 dep ensure
 go run cmd/seater/main.go
 ```
+
+There is only one end-point.
+
+localhost:8080/plane/{planeID:string}/{indexOfTheSeat:int}
+
+### TODO
+
+[] Tests
+[] Docs
