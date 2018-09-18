@@ -37,7 +37,7 @@ func GetPlane(id string) *plane.Plane {
 
 func serve() {
 	app := iris.Default()
-	app.Get("/plane/{id:string}/{index:int}", func(ctx iris.Context) {
+	app.Get("/plane/id/{id:string}/seat/{index:int}", func(ctx iris.Context) {
 		id := ctx.Params().Get("id")
 		index, _ := ctx.Params().GetInt("index")
 

@@ -21,9 +21,9 @@ dep ensure
 go run cmd/seater/main.go
 ```
 
-There is only one end-point.
+There is only one end-point which gets the seat number as asked in the assignment docs.
 
-localhost:8080/plane/{planeID:string}/{indexOfTheSeat:int}
+localhost:8080/plane/id/{id:string}/seat/{index:int}
 
 ### TODO
 
