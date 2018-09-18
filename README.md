@@ -3,7 +3,7 @@ Simple show case app
 
 idiotically simple solution with a ***BONUS***
 
-I didn't want to just calculate a 60x10 plane seats but I created a `plane` package that could define new planes exc.
+I didn't want to just calculate a 60x10 plane seats but I created a `plane` package that could define new planes and query their seats with their ids individually.
 
 Dependecy management provided by `dep` you should [install](https://github.com/golang/dep/) it.
 uses only `github.com/kataras/iris` though
