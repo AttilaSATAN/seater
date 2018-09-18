@@ -1,10 +1,7 @@
 # seater
 Simple show case app
 
-idiotically simple app
-
-
-***BONUS***
+idiotically simple solution with a ***BONUS***
 
 I didn't want to just calculate a 60x10 plane seats but I created a `plane` package that could define new planes exc.
 
