@@ -3,7 +3,7 @@ Simple show case app
 
 idiotically simple app
 
-Dependecy management provided by `dep` you should (install)[go get -u github.com/golang/dep/cmd/dep] it.
+Dependecy management provided by `dep` you should [install](github.com/golang/dep/cmd/dep) it.
 uses only `github.com/kataras/iris` though
 
 ```
