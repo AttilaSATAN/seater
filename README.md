@@ -27,5 +27,5 @@ localhost:8080/plane/id/{id:string}/seat/{index:int}
 
 ### TODO
 
-[] Tests
-[] Docs
+- Tests
+- Docs
