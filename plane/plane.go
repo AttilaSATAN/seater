@@ -1,6 +1,7 @@
 package plane
 
 import (
+	"errors"
 	"math"
 	"strconv"
 )
@@ -15,11 +16,15 @@ type Plane struct {
 	SeatOrderMap []int
 }
 
-func (p Plane) SeatByIndex(i int) string {
+func (p Plane) SeatByIndex(i int) (string, error) {
+
+	if i > p.TotalSeats {
+		return "", errors.New("seat index exceeds total seat number ")
+	}
 	c := i % len(p.ColNames)
 	r := math.Floor(float64(i / len(p.ColNames)))
 
-	return strconv.Itoa(int(r)) + p.ColNames[c]
+	return strconv.Itoa(int(r)) + p.ColNames[c], nil
 }
 
 type PlanePrototype struct {

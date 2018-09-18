@@ -42,7 +42,13 @@ func serve() {
 		index, _ := ctx.Params().GetInt("index")
 
 		if p := GetPlane(id); p != nil {
-			ctx.JSON(p.SeatByIndex(index))
+			res, err := p.SeatByIndex(index)
+			if err != nil {
+				ctx.StatusCode(iris.StatusBadRequest)
+				ctx.JSON(err.Error())
+				return
+			}
+			ctx.JSON(res)
 		}
 	})
 	app.Run(iris.Addr(":8080"))
